@@ -54,7 +54,7 @@ const writeToReadMeFile = (input) =>
 `# ${input.title}
 ![badmath](https://img.shields.io/static/v1?label=LIC&message=${input.license}&color=blue&style=plastic&logo=appveyor)
 ## Description
--- ${input.description}
+${input.description}
 
 ## Table of Contents
 - [Description](#description)
@@ -65,11 +65,11 @@ const writeToReadMeFile = (input) =>
 
 - [Contact-Info](#contact-info)
 ## Usage
--- ${input.usage}
+${input.usage}
 ## Install
---How to install the application.
+How to install the application.
 
--- ${input.install}
+${input.install}
 ## Contact-Info
 - gitHub Username: ${input.gitHub}
 

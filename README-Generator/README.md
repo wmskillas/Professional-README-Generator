@@ -1,7 +1,7 @@
-# The applicationator
-![badmath](https://img.shields.io/static/v1?label=LIC&message=GT&color=blue&style=plastic&logo=appveyor)
+# 
+![badmath](https://img.shields.io/static/v1?label=LIC&message=MIT&color=blue&style=plastic&logo=appveyor)
 ## Description
--- makes applications
+
 
 ## Table of Contents
 - [Description](#description)
@@ -12,12 +12,12 @@
 
 - [Contact-Info](#contact-info)
 ## Usage
--- provides the ability for people and companies to use this application to make whatever application they want ot make
+
 ## Install
---How to install the application.
+How to install the application.
 
--- Go to my gitHub and clone this repository
+
 ## Contact-Info
-- gitHub Username: toast
+- gitHub Username: 
 
-- Email: toast@gmail.com
+- Email: 
