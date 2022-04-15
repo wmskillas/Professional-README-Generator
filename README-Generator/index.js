@@ -1,9 +1,11 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const genMarkdown = require('generateMarkdown');
-const inquirer = require('inquirer');
+// const genMarkdown = require('generateMarkdown');
 
+
+const writeFileAsync = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
@@ -49,32 +51,37 @@ console.log(questions);
 
 // TODO: Create a function to write README file
 const writeToReadMeFile = (input) =>
-`#${input.title}
+`# ${input.title}
 ![badmath](https://img.shields.io/static/v1?label=LIC&message=${input.license}&color=blue&style=plastic&logo=appveyor)
 ## Description
---${input.description}
+-- ${input.description}
 
 ## Table of Contents
-[Description](#description)
+- [Description](#description)
 
-[Usage](#usage)
+- [Usage](#usage)
 
-[Install](#install)
+- [Install](#install)
 
-[Contact-Info](#contact-info)
+- [Contact-Info](#contact-info)
 ## Usage
---${input.usage}
+-- ${input.usage}
 ## Install
 --How to install the application.
 
---${input.install}
+-- ${input.install}
 ## Contact-Info
---gitHub Username:${input.gitHub}
+- gitHub Username: ${input.gitHub}
 
---Email:${input.email}`
+- Email: ${input.email}`;
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    questions()
+    .then((input) => writeFileAsync('README.md', writeToReadMeFile(input)))
+    .then(() => console.log('Congrats you made a README.md'))
+    .catch((err) => console.log(err));
+};
 
 // Function call to initialize app
 init();
