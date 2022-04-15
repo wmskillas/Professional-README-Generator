@@ -1,4 +1,6 @@
 # Title
+![badmath](https://img.shields.io/static/v1?label=LIC&message=${input.license}&color=blue&style=plastic&logo=appveyor)
+
 ## Install
 --How to install the application.
 

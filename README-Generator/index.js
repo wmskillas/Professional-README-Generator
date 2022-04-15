@@ -50,6 +50,7 @@ console.log(questions);
 // TODO: Create a function to write README file
 const writeToReadMeFile = (input) =>
 `#${input.title}
+![badmath](https://img.shields.io/static/v1?label=LIC&message=${input.license}&color=blue&style=plastic&logo=appveyor)
 ## Description
 --${input.description}
 
