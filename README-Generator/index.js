@@ -48,7 +48,29 @@ const questions = () => {
 console.log(questions);
 
 // TODO: Create a function to write README file
-function writeToReadMeFile(fileName, data) {}
+const writeToReadMeFile = (input) =>
+`#${input.title}
+## Description
+--${input.description}
+
+## Table of Contents
+[Description](#description)
+
+[Usage](#usage)
+
+[Install](#install)
+
+[Contact-Info](#contact-info)
+## Usage
+--${input.usage}
+## Install
+--How to install the application.
+
+--${input.install}
+## Contact-Info
+--gitHub Username:${input.gitHub}
+
+--Email:${input.email}`
 
 // TODO: Create a function to initialize app
 function init() {}
